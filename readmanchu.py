@@ -125,8 +125,8 @@ def main():
     adaptive_threshold = adaptive_threshold[10:adaptive_threshold.shape[0]-10, 10:adaptive_threshold.shape[1]-10]
     image_blur = cv2.GaussianBlur(adaptive_threshold,(3,3),cv2.BORDER_DEFAULT)
 
-    cv2.imshow('Binary Image', cv2.rotate(adaptive_threshold, cv2.ROTATE_90_CLOCKWISE))
-    cv2.waitKey(1)
+    # cv2.imshow('Binary Image', cv2.rotate(adaptive_threshold, cv2.ROTATE_90_CLOCKWISE))
+    # cv2.waitKey(1)
 
     vertical_sum = np.sum(image_blur, axis=1)
 
@@ -206,9 +206,9 @@ def main():
                 words, prob = seq2seq_decode(encoder_out, decoder, decoder_input, decoder_hidden, max_length)
                 print(words+" ", end = '')
         print("\n")
-        cv2.destroyAllWindows()
-        cv2.imshow('Current Line', cv2.rotate(img_display, cv2.ROTATE_90_CLOCKWISE))
-        cv2.waitKey(1)
+        # cv2.destroyAllWindows()
+        # cv2.imshow('Current Line', cv2.rotate(img_display, cv2.ROTATE_90_CLOCKWISE))
+        # cv2.waitKey(1)
 
     input("Reading Completed, Press Any Key to Exit. Ambula Baniha.")
     # color = (0, 0, 255)
